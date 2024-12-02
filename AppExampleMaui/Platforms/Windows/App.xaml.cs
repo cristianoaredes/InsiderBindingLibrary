@@ -33,6 +33,16 @@ public partial class App : MauiWinUIApplication
 			if (Insider.Instance.IsSDKInitialized)
 			{
 				Insider.Instance.SetPushToken("teste");
+
+				// Get content optimizer values
+				string contentOptimizerString = Insider.Instance.GetContentStringWithName("string_variable_name", "defaultValue", ContentOptimizerDataType.Element);
+				Console.WriteLine($"[getContentStringWithName]: {contentOptimizerString}");
+
+				bool contentOptimizerBool = Insider.Instance.GetContentBoolWithName("bool_variable_name", true, ContentOptimizerDataType.Element);
+				Console.WriteLine($"[getContentBoolWithName]: {contentOptimizerBool}");
+
+				int contentOptimizerInt = Insider.Instance.GetContentIntWithName("int_variable_name", 10, ContentOptimizerDataType.Element);
+				Console.WriteLine($"[getContentIntWithName]: {contentOptimizerInt}");
 			}
 			else
 			{
