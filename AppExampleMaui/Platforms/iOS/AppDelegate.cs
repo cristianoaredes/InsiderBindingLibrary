@@ -1,5 +1,5 @@
 ﻿using Foundation;
-using Com.Useinsider.Insider;
+using InsiderBindingLibrary;
 
 namespace AppExampleMaui;
 

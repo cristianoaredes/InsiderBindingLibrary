@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
-using Com.Useinsider.Insider;
+using InsiderBindingLibrary;
 
 namespace AppExampleMaui;
 
