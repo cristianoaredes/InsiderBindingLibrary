@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Com.Useinsider.Insider;
+using InsiderBindingLibrary;
 
 namespace AppExampleMaui;
 

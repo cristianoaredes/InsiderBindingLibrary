@@ -1,4 +1,4 @@
-﻿using Com.Useinsider.Insider;
+﻿using InsiderBindingLibrary;
 using Serilog;
 using System.Threading.Tasks;
 
