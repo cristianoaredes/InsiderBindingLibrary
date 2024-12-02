@@ -9,5 +9,20 @@
     <method name="SetPushToken" type="void" static="false">
       <parameter name="token" type="java.lang.String" />
     </method>
+    <method name="getContentStringWithName" type="java.lang.String" static="false">
+      <parameter name="name" type="java.lang.String" />
+      <parameter name="defaultValue" type="java.lang.String" />
+      <parameter name="dataType" type="com.useinsider.insider.ContentOptimizerDataType" />
+    </method>
+    <method name="getContentBoolWithName" type="boolean" static="false">
+      <parameter name="name" type="java.lang.String" />
+      <parameter name="defaultValue" type="boolean" />
+      <parameter name="dataType" type="com.useinsider.insider.ContentOptimizerDataType" />
+    </method>
+    <method name="getContentIntWithName" type="int" static="false">
+      <parameter name="name" type="java.lang.String" />
+      <parameter name="defaultValue" type="int" />
+      <parameter name="dataType" type="com.useinsider.insider.ContentOptimizerDataType" />
+    </method>
   </add-node>
 </bindings>

@@ -11,5 +11,8 @@
     <field jni-name="Fragment_tag" clr-name="Tag" value="2" />
   </mapping>
   -->
+  <mapping jni-class="com/useinsider/insider/ContentOptimizerDataType" clr-enum-type="Com.Useinsider.Insider.ContentOptimizerDataType">
+    <field jni-name="ELEMENT" clr-name="Element" value="0" />
+    <field jni-name="VARIANT" clr-name="Variant" value="1" />
+  </mapping>
 </enum-field-mappings>
-
