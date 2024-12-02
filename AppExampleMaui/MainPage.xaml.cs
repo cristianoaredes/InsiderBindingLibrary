@@ -7,19 +7,30 @@ public partial class MainPage : ContentPage
 
 	public MainPage()
 	{
-		
 		InitializeComponent();
-        //Insider.Instance.Init((Android.App.Application?)Android.App.Application.Context.ApplicationContext, "caaqui");
 
-		if (Insider.Instance.IsSDKInitialized)
-		{
-			Insider.Instance.SetPushToken("teste");
+#if ANDROID
+        try
+        {
+            Insider.Instance.Init((Android.App.Application?)Android.App.Application.Context.ApplicationContext, "caaqui");
+
+            if (Insider.Instance.IsSDKInitialized)
+            {
+                Insider.Instance.SetPushToken("teste");
+            }
+            else
+            {
+                CounterBtn.Text = $"SDK Insider não iniciou.";
+            }
         }
-		else
-		{
-            CounterBtn.Text = $"SDK Insider não iniciou.";
+        catch (Exception ex)
+        {
+            // Log the exception details
+            Console.WriteLine($"SDK Initialization Error: {ex.Message}");
+            // Display a user-friendly error message
+            CounterBtn.Text = $"SDK Initialization failed.";
         }
-		
+#endif
 	}
 
 	private void OnCounterClicked(object sender, EventArgs e)
@@ -34,5 +45,3 @@ public partial class MainPage : ContentPage
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
 }
-
-
