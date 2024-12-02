@@ -1,4 +1,5 @@
 ﻿using Microsoft.UI.Xaml;
+using Com.Useinsider.Insider;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -20,6 +21,29 @@ public partial class App : MauiWinUIApplication
 	}
 
 	protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+
+	protected override void OnLaunched(LaunchActivatedEventArgs args)
+	{
+		base.OnLaunched(args);
+
+		try
+		{
+			Insider.Instance.Init(null, "caaqui");
+
+			if (Insider.Instance.IsSDKInitialized)
+			{
+				Insider.Instance.SetPushToken("teste");
+			}
+			else
+			{
+				// Handle SDK not initialized case
+			}
+		}
+		catch (Exception ex)
+		{
+			// Log the exception details
+			Console.WriteLine($"SDK Initialization Error: {ex.Message}");
+			// Display a user-friendly error message
+		}
+	}
 }
-
-
