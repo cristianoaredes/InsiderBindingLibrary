@@ -9,7 +9,7 @@ public partial class MainPage : ContentPage
 	{
 		
 		InitializeComponent();
-        //Insider.Instance.Init((Android.App.Application?)Android.App.Application.Context.ApplicationContext, "caaqui");
+        Insider.Instance.Init((Android.App.Application?)Android.App.Application.Context.ApplicationContext, "caaqui");
 
 		if (Insider.Instance.IsSDKInitialized)
 		{
@@ -34,5 +34,4 @@ public partial class MainPage : ContentPage
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
 }
-
 
