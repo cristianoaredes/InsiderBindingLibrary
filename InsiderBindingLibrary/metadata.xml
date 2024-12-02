@@ -1,3 +1,13 @@
-﻿<bindings>
+<bindings>
   <remove-node path="/api/package[@name='com.useinsider.insider']/class[@name='BuildConfig']" />
+  <add-node path="/api/package[@name='com.useinsider.insider']/class[@name='Insider']">
+    <method name="Init" type="void" static="false">
+      <parameter name="context" type="android.content.Context" />
+      <parameter name="partnerName" type="java.lang.String" />
+    </method>
+    <method name="IsSDKInitialized" type="boolean" static="false" />
+    <method name="SetPushToken" type="void" static="false">
+      <parameter name="token" type="java.lang.String" />
+    </method>
+  </add-node>
 </bindings>
